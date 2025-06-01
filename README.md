@@ -13,7 +13,8 @@
     *   你將學到什麼：本書內容概覽
     *   閱讀本書前的準備
 *   [第二章 n8n 基礎 (醫療應用)](./docs/02_n8n-essentials/)
-    *   [請在此處新增第二章的子項目連結]
+    *   [n8n 安裝](./docs/02_n8n-essentials/installation.md)
+    *   [請在此處新增第二章的其他子項目連結]
 *   [第三章 醫療應用案例與流程](./docs/03_medical-use-cases/)
     *   [請在此處新增第三章的子項目連結]
 *   [第四章 系統整合 (醫療資訊系統)](./docs/04_integrations/)
