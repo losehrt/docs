@@ -39,15 +39,15 @@ n8n 提供了多種靈活的安裝方式，以適應不同的使用需求和部�
 1.  **建立專案資料夾：**
     首先，為您的 n8n 部署建立一個專門的資料夾。這個資料夾將用於存放 `docker-compose.yml` 檔案和 n8n 的持久化資料。
 
-    ```bash
+```bash
 mkdir n8n-medical
 cd n8n-medical
-    ```
+```
 
 2.  **建立 Docker Compose 檔案：**
     在剛建立的 `n8n-medical` 資料夾中，建立一個名為 `docker-compose.yml` 的檔案。這個檔案定義了運行 n8n 和資料庫服務所需的配置。以下是一個包含 n8n 和 PostgreSQL 資料庫的 `docker-compose.yml` 範例：
 
-    ```yaml
+```yaml
 version: '3.8'
 
 services:
@@ -89,11 +89,11 @@ services:
 volumes:
   postgres_data:
     driver: local
-    ```
+```
 
-    **注意：** 上述範例使用了多個環境變數（以 `${}` 包裹），這些變數需要在運行 Docker Compose 之前設定。您可以建立一個 `.env` 檔案來定義這些變數，例如：
+**注意：** 上述範例使用了多個環境變數（以 `${}` 包裹），這些變數需要在運行 Docker Compose 之前設定。您可以建立一個 `.env` 檔案來定義這些變數，例如：
 
-    ```bash
+```bash
 N8N_BASIC_AUTH_USER=your_n8n_user
 N8N_BASIC_AUTH_PASSWORD=your_n8n_password
 N8N_HOST=localhost
@@ -101,16 +101,18 @@ WEBHOOK_URL=http://localhost:5678/
 POSTGRES_USER=your_postgres_user
 POSTGRES_PASSWORD=your_postgres_password
 POSTGRES_DB=n8n_db
-    ```
-    請務必替換 `your_n8n_user`, `your_n8n_password`, `your_postgres_user`, `your_postgres_password`, `n8n_db` 以及 `N8N_HOST` 和 `WEBHOOK_URL` 的值。在生產環境中，建議使用更安全的密碼並配置 HTTPS。
+```
+
+請務必替換`your_n8n_user`, `your_n8n_password`, `your_postgres_user`, `your_postgres_password`, `n8n_db` 以及 `N8N_HOST` 和 `WEBHOOK_URL` 的值。在生產環境中，建議使用更安全的密碼並配置 HTTPS。
 
 3.  **啟動 n8n 服務：**
     在 `n8n-medical` 資料夾中，運行以下指令啟動 n8n 和 PostgreSQL 服務：
 
-    ```bash
+```bash
 docker-compose up -d
-    ```
-    `-d` 標誌表示在背景運行服務。
+```
+
+`-d` 標誌表示在背景運行服務。
 
 **安裝後的驗證：**
 
@@ -138,17 +140,17 @@ docker-compose logs n8n
 1.  **安裝 n8n：**
     打開您的終端或命令提示字元，運行以下 npm 命令來全局安裝 n8n：
 
-    ```bash
+```bash
 npm install n8n -g
-    ```
-    `-g` 標誌表示全局安裝，這樣您就可以在任何目錄下運行 `n8n` 命令。
+```
+`-g` 標誌表示全局安裝，這樣您就可以在任何目錄下運行 `n8n` 命令。
 
 2.  **啟動 n8n：**
     安裝完成後，直接在終端中運行以下命令來啟動 n8n 服務：
 
-    ```bash
+```bash
 n8n
-    ```
+```
 
 **注意事項：**
 
